@@ -45,17 +45,6 @@ const serverlessConfiguration: Serverless = {
     ]
   },
   functions: {
-    hello: {
-      handler: 'handler.hello',
-      events: [
-        {
-          http: {
-            method: 'get',
-            path: 'hello',
-          }
-        }
-      ]
-    },
     forwardSes: {
       handler: 'src/handlers/forwardSes.handler'
     }
