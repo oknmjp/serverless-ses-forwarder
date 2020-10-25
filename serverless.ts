@@ -26,6 +26,23 @@ const serverlessConfiguration: Serverless = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
     },
+    iamRoleStatements: [
+      {
+        Effect: 'Allow',
+        Action: [
+          's3:GetObject',
+          's3:PutObject'
+        ],
+        Resource: 'arn:aws:s3:::ses-oknmjp-receive-mail/*'
+      },
+      {
+        Effect: 'Allow',
+        Action: [
+          'ses:SendRawEmail'
+        ],
+        Resource: '*'
+      }
+    ]
   },
   functions: {
     hello: {
@@ -38,6 +55,9 @@ const serverlessConfiguration: Serverless = {
           }
         }
       ]
+    },
+    forwardSes: {
+      handler: 'src/handlers/forwardSes.handler'
     }
   }
 }
