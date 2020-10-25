@@ -18,6 +18,7 @@ const serverlessConfiguration: Serverless = {
   plugins: ['serverless-webpack'],
   provider: {
     name: 'aws',
+    region: 'us-west-2',
     runtime: 'nodejs12.x',
     apiGateway: {
       minimumCompressionSize: 1024,
