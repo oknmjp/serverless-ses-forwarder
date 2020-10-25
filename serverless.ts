@@ -23,6 +23,7 @@ const serverlessConfiguration: Serverless = {
     apiGateway: {
       minimumCompressionSize: 1024,
     },
+    logRetentionInDays: 30,
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
     },
