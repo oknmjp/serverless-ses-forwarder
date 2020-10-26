@@ -19,7 +19,7 @@
     "serverless": "2.8.0",
     "serverless-dotenv-plugin": "3.1.0",
     "serverless-webpack": "5.3.5",
-    "ts-loader": "5.4.5",
+    "ts-loader": "8.0.7",
     "ts-node": "8.10.2",
     "typescript": "3.9.7",
     "webpack": "4.44.2",
