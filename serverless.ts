@@ -15,7 +15,10 @@ const serverlessConfiguration: Serverless = {
     }
   },
   // Add the serverless-webpack plugin
-  plugins: ['serverless-webpack'],
+  plugins: [
+    'serverless-webpack',
+    'serverless-dotenv-plugin'
+  ],
   provider: {
     name: 'aws',
     region: 'us-west-2',
@@ -47,7 +50,12 @@ const serverlessConfiguration: Serverless = {
   },
   functions: {
     forwardSes: {
-      handler: 'src/handlers/forwardSes.handler'
+      handler: 'src/handlers/forwardSes.handler',
+      environment: {
+        EMAIL_BUCKET: '${env:EMAIL_BUCKET}',
+        ORIGINAL_RECIPIENT: '${env:ORIGINAL_RECIPIENT}',
+        FORWARD_RECIPIENT: '${env:FORWARD_RECIPIENT}'
+      }
     }
   }
 }

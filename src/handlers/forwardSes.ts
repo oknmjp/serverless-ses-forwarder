@@ -2,15 +2,16 @@ import { SESHandler } from 'aws-lambda'
 import LambdaForwarder from 'aws-lambda-ses-forwarder'
 
 export const handler: SESHandler = (event, context, callback) => {
+  let forwardMapping;
+  forwardMapping[process.env.ORIGINAL_RECIPIENT] = [
+    process.env.FORWARD_RECIPIENT
+  ]
+
   const overrides = {
     config: {
-      emailBucket: 'ses-oknmjp-receive-mail',
+      emailBucket: process.env.EMAIL_BUCKET,
       emailKeyPrefix: '',
-      forwardMapping: {
-        'okonomi@oknm.jp': [
-          'shinya.kawakami@gmail.com'
-        ]
-      }
+      forwardMapping,
     }
   }
   LambdaForwarder.handler(event, context, callback, overrides)
