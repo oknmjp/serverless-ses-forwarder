@@ -2,7 +2,7 @@ import { SESHandler } from 'aws-lambda'
 import LambdaForwarder from 'aws-lambda-ses-forwarder'
 
 export const handler: SESHandler = (event, context, callback) => {
-  let forwardMapping;
+  let forwardMapping = {};
   forwardMapping[process.env.ORIGINAL_RECIPIENT] = [
     process.env.FORWARD_RECIPIENT
   ]
