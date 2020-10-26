@@ -49,7 +49,7 @@ const serverlessConfiguration: Serverless = {
     ]
   },
   functions: {
-    forwardSes: {
+    'forward-ses': {
       handler: 'src/handlers/forwardSes.handler',
       environment: {
         EMAIL_BUCKET: '${env:EMAIL_BUCKET}',
