@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "aws-lambda-ses-forwarder": "^5.0.0",
-    "source-map-support": "^0.5.10"
+    "aws-lambda-ses-forwarder": "5.0.0",
+    "source-map-support": "0.5.19"
   },
   "devDependencies": {
     "@types/aws-lambda": "8.10.64",
