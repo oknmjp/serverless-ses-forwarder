@@ -1,12 +1,7 @@
 import type { Serverless } from 'serverless/aws';
 
 const serverlessConfiguration: Serverless = {
-  service: {
-    name: 'serverless-ses-forwarder',
-    // app and org for use with dashboard.serverless.com
-    // app: your-app-name,
-    // org: your-org-name,
-  },
+  service: 'serverless-ses-forwarder',
   frameworkVersion: '2',
   custom: {
     webpack: {
