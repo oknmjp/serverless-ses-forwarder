@@ -15,7 +15,7 @@
     "@types/aws-lambda": "8.10.68",
     "@types/node": "10.17.50",
     "@types/serverless": "1.78.16",
-    "fork-ts-checker-webpack-plugin": "5.2.1",
+    "fork-ts-checker-webpack-plugin": "6.3.4",
     "serverless": "2.16.1",
     "serverless-dotenv-plugin": "3.1.0",
     "serverless-webpack": "5.3.5",
